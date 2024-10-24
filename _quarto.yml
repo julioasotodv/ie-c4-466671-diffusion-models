@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - about.qmd
+    - Slides-handout_version.ipynb
+    - Appendices for lectures on diffusion models.ipynb
+  resources:
+    - forward_diffusion_demo
+    - the_nice_property_demo
+    - js
+    - Slides.pdf
+
+website:
+  title: "C4_466671 - Diffusion models"
+  description: Lectures on diffusion models at IE university (C4_466671 - Advanced Artificial Intelligence)
+  site-url: "https://julioasotodv.github.io/ie-c4-466671-diffusion-models"
+  repo-url: "https://github.com/julioasotodv/ie-C4-466671-diffusion-models"
+  reader-mode: true
+  page-footer: "2024 - Laura Sánchez & Julio A. Soto"
+  image: "images/sdxl_polarbear_og.png"
+  open-graph: true
+  navbar:
+    background: secondary
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    tools:
+      - icon: github
+        href: "https://github.com/julioasotodv/ie-C4-466671-diffusion-models"
+
+format:
+  html:
+    embed-resources: false
+    fontsize: 15px
+    email-obfuscation: "javascript"
+    theme:
+      dark: [darkly, styles/extra-theme-dark.scss]
+      light: [flatly, styles/extra-theme-light.scss]
+    include-in-header: 
+      text: |
+        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="dbabdea2-42a0-493a-a93c-f507726badd6" async></script>
+

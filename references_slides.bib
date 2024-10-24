@@ -1,0 +1,848 @@
+@article{ho2020denoising,
+  title={Denoising Diffusion Probabilistic Models},
+  author={Jonathan Ho and Ajay Jain and Pieter Abbeel},
+  year={2020},
+  journal={arXiv preprint arxiv:2006.11239}
+}
+
+@article{weng2021diffusion,
+  title   = "What are diffusion models?",
+  author  = "Weng, Lilian",
+  journal = "lilianweng.github.io",
+  year    = "2021",
+  month   = "Jul",
+  url     = "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/"
+}
+
+@misc{kingma2013autoencodingvariationalbayes,
+      title={Auto-Encoding Variational Bayes}, 
+      author={Diederik P Kingma and Max Welling},
+      year={2013},
+      eprint={1312.6114},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML},
+      url={https://arxiv.org/abs/1312.6114}, 
+}
+
+@InProceedings{pmlr-v37-sohl-dickstein15,
+  title = 	 {Deep Unsupervised Learning using Nonequilibrium Thermodynamics},
+  author = 	 {Sohl-Dickstein, Jascha and Weiss, Eric and Maheswaranathan, Niru and Ganguli, Surya},
+  booktitle = 	 {Proceedings of the 32nd International Conference on Machine Learning},
+  pages = 	 {2256--2265},
+  year = 	 {2015},
+  editor = 	 {Bach, Francis and Blei, David},
+  volume = 	 {37},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Lille, France},
+  month = 	 {07--09 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v37/sohl-dickstein15.pdf},
+  url = 	 {https://proceedings.mlr.press/v37/sohl-dickstein15.html},
+  abstract = 	 {A central problem in machine learning involves modeling complex data-sets using highly flexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both flexibility and tractability. The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly flexible and tractable generative model of the data. This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model. We additionally release an open source reference implementation of the algorithm.}
+}
+
+@InProceedings{10.1007/978-3-319-24574-4_28,
+author="Ronneberger, Olaf
+and Fischer, Philipp
+and Brox, Thomas",
+editor="Navab, Nassir
+and Hornegger, Joachim
+and Wells, William M.
+and Frangi, Alejandro F.",
+title="U-Net: Convolutional Networks for Biomedical Image Segmentation",
+booktitle="Medical Image Computing and Computer-Assisted Intervention -- MICCAI 2015",
+year="2015",
+publisher="Springer International Publishing",
+address="Cham",
+pages="234--241",
+abstract="There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net.",
+isbn="978-3-319-24574-4"
+}
+
+@inproceedings{10.1007/978-3-030-01261-8_1,
+author = {Wu, Yuxin and He, Kaiming},
+title = {Group Normalization},
+year = {2018},
+isbn = {978-3-030-01260-1},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-030-01261-8_1},
+doi = {10.1007/978-3-030-01261-8_1},
+abstract = {Batch Normalization (BN) is a milestone technique in the development of deep learning, enabling various networks to train. However, normalizing along the batch dimension introduces problems—BN’s error increases rapidly when the batch size becomes smaller, caused by inaccurate batch statistics estimation. This limits BN’s usage for training larger models and transferring features to computer vision tasks including detection, segmentation, and video, which require small batches constrained by memory consumption. In this paper, we present Group Normalization (GN) as a simple alternative to BN. GN divides the channels into groups and computes within each group the mean and variance for normalization. GN’s computation is independent of batch sizes, and its accuracy is stable in a wide range of batch sizes. On ResNet-50 trained in ImageNet, GN has 10.6\% lower error than its BN counterpart when using a batch size of 2; when using typical batch sizes, GN is comparably good with BN and outperforms other normalization variants. Moreover, GN can be naturally transferred from pre-training to fine-tuning. GN can outperform its BN-based counterparts for object detection and segmentation in COCO, and for video classification in Kinetics, showing that GN can effectively replace the powerful BN in a variety of tasks. GN can be easily implemented by a few lines of code.},
+booktitle = {Computer Vision – ECCV 2018: 15th European Conference, Munich, Germany, September 8-14, 2018, Proceedings, Part XIII},
+pages = {3–19},
+numpages = {17},
+location = {Munich, Germany}
+}
+
+@inproceedings{NIPS2017_3f5ee243,
+ author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, \L ukasz and Polosukhin, Illia},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {I. Guyon and U. Von Luxburg and S. Bengio and H. Wallach and R. Fergus and S. Vishwanathan and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Attention is All you Need},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf},
+ volume = {30},
+ year = {2017}
+}
+
+@misc{nichol2021improveddenoisingdiffusionprobabilistic,
+      title={Improved Denoising Diffusion Probabilistic Models}, 
+      author={Alex Nichol and Prafulla Dhariwal},
+      year={2021},
+      eprint={2102.09672},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2102.09672}, 
+}
+
+@article{song2020denoising,
+  title={Denoising Diffusion Implicit Models},
+  author={Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  journal={arXiv:2010.02502},
+  year={2020},
+  month={October},
+  abbr={Preprint},
+  url={https://arxiv.org/abs/2010.02502}
+}
+
+@inproceedings{NEURIPS2021_49ad23d1,
+ author = {Dhariwal, Prafulla and Nichol, Alexander},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {M. Ranzato and A. Beygelzimer and Y. Dauphin and P.S. Liang and J. Wortman Vaughan},
+ pages = {8780--8794},
+ publisher = {Curran Associates, Inc.},
+ title = {Diffusion Models Beat GANs on Image Synthesis},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2021/file/49ad23d1ec9fa4bd8d77d02681df5cfa-Paper.pdf},
+ volume = {34},
+ year = {2021}
+}
+
+@misc{ho2022classifierfreediffusionguidance,
+      title={Classifier-Free Diffusion Guidance}, 
+      author={Jonathan Ho and Tim Salimans},
+      year={2022},
+      eprint={2207.12598},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2207.12598}, 
+}
+
+@inproceedings{10.1145/3528233.3530757,
+author = {Saharia, Chitwan and Chan, William and Chang, Huiwen and Lee, Chris and Ho, Jonathan and Salimans, Tim and Fleet, David and Norouzi, Mohammad},
+title = {Palette: Image-to-Image Diffusion Models},
+year = {2022},
+isbn = {9781450393379},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3528233.3530757},
+doi = {10.1145/3528233.3530757},
+abstract = {This paper develops a unified framework for image-to-image translation based on conditional diffusion models and evaluates this framework on four challenging image-to-image translation tasks, namely colorization, inpainting, uncropping, and JPEG restoration. Our simple implementation of image-to-image diffusion models outperforms strong GAN and regression baselines on all tasks, without task-specific hyper-parameter tuning, architecture customization, or any auxiliary loss or sophisticated new techniques needed. We uncover the impact of an L2 vs. L1 loss in the denoising diffusion objective on sample diversity, and demonstrate the importance of self-attention in the neural architecture through empirical studies. Importantly, we advocate a unified evaluation protocol based on ImageNet, with human evaluation and sample quality scores (FID, Inception Score, Classification Accuracy of a pre-trained ResNet-50, and Perceptual Distance against original images). We expect this standardized evaluation protocol to play a role in advancing image-to-image translation research. Finally, we show that a generalist, multi-task diffusion model performs as well or better than task-specific specialist counterparts. Check out https://diffusion-palette.github.io/ for an overview of the results and code.},
+booktitle = {ACM SIGGRAPH 2022 Conference Proceedings},
+articleno = {15},
+numpages = {10},
+keywords = {Generative models, Diffusion models., Deep learning},
+location = {Vancouver, BC, Canada},
+series = {SIGGRAPH '22}
+}
+
+@INPROCEEDINGS{10377881,
+  author={Zhang, Lvmin and Rao, Anyi and Agrawala, Maneesh},
+  booktitle={2023 IEEE/CVF International Conference on Computer Vision (ICCV)}, 
+  title={Adding Conditional Control to Text-to-Image Diffusion Models}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={3813-3824},
+  keywords={Training;Image segmentation;Computer vision;Image coding;Image edge detection;Neural networks;Computer architecture},
+  doi={10.1109/ICCV51070.2023.00355}
+}
+
+@InProceedings{pmlr-v139-radford21a,
+  title = 	 {Learning Transferable Visual Models From Natural Language Supervision},
+  author =       {Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {8748--8763},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {18--24 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/radford21a/radford21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/radford21a.html},
+  abstract = 	 {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on.}
+}
+
+@InProceedings{pmlr-v162-nichol22a,
+  title = 	 {{GLIDE}: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models},
+  author =       {Nichol, Alexander Quinn and Dhariwal, Prafulla and Ramesh, Aditya and Shyam, Pranav and Mishkin, Pamela and Mcgrew, Bob and Sutskever, Ilya and Chen, Mark},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning},
+  pages = 	 {16784--16804},
+  year = 	 {2022},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  volume = 	 {162},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {17--23 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v162/nichol22a/nichol22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v162/nichol22a.html},
+  abstract = 	 {Diffusion models have recently been shown to generate high-quality synthetic images, especially when paired with a guidance technique to trade off diversity for fidelity. We explore diffusion models for the problem of text-conditional image synthesis and compare two different guidance strategies: CLIP guidance and classifier-free guidance. We find that the latter is preferred by human evaluators for both photorealism and caption similarity, and often produces photorealistic samples. Samples from a 3.5&nbsp;billion parameter text-conditional diffusion model using classifier-free guidance are favored by human evaluators to those from DALL-E, even when the latter uses expensive CLIP reranking. Additionally, we find that our models can be fine-tuned to perform image inpainting, enabling powerful text-driven image editing. We train a smaller model on a filtered dataset and release the code and weights at https://github.com/openai/glide-text2im.}
+}
+
+@InProceedings{pmlr-v139-ramesh21a,
+  title = 	 {Zero-Shot Text-to-Image Generation},
+  author =       {Ramesh, Aditya and Pavlov, Mikhail and Goh, Gabriel and Gray, Scott and Voss, Chelsea and Radford, Alec and Chen, Mark and Sutskever, Ilya},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {8821--8831},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {18--24 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/ramesh21a/ramesh21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/ramesh21a.html},
+  abstract = 	 {Text-to-image generation has traditionally focused on finding better modeling assumptions for training on a fixed dataset. These assumptions might involve complex architectures, auxiliary losses, or side information such as object part labels or segmentation masks supplied during training. We describe a simple approach for this task based on a transformer that autoregressively models the text and image tokens as a single stream of data. With sufficient data and scale, our approach is competitive with previous domain-specific models when evaluated in a zero-shot fashion.}
+}
+
+@misc{ramesh2022hierarchicaltextconditionalimagegeneration,
+      title={Hierarchical Text-Conditional Image Generation with CLIP Latents}, 
+      author={Aditya Ramesh and Prafulla Dhariwal and Alex Nichol and Casey Chu and Mark Chen},
+      year={2022},
+      eprint={2204.06125},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2204.06125}, 
+}
+
+@inproceedings{BetkerImprovingIG,
+  title={Improving Image Generation with Better Captions},
+  author={James Betker and Gabriel Goh and Li Jing and † TimBrooks and Jianfeng Wang and Linjie Li and † LongOuyang and † JuntangZhuang and † JoyceLee and † YufeiGuo and † WesamManassra and † PrafullaDhariwal and † CaseyChu and † YunxinJiao and Aditya Ramesh},
+  url={https://api.semanticscholar.org/CorpusID:264403242}
+}
+
+@inproceedings{NEURIPS2022_ec795aea,
+ author = {Saharia, Chitwan and Chan, William and Saxena, Saurabh and Li, Lala and Whang, Jay and Denton, Emily L and Ghasemipour, Kamyar and Gontijo Lopes, Raphael and Karagol Ayan, Burcu and Salimans, Tim and Ho, Jonathan and Fleet, David J and Norouzi, Mohammad},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {36479--36494},
+ publisher = {Curran Associates, Inc.},
+ title = {Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/ec795aeadae0b7d230fa35cbaf04c041-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@article{JMLR:v21:20-074,
+  author  = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+  title   = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {140},
+  pages   = {1--67},
+  url     = {http://jmlr.org/papers/v21/20-074.html}
+}
+
+@misc{imagenteamgoogle2024imagen3,
+      title={Imagen 3}, 
+      author={Imagen Team},
+      year={2024},
+      eprint={2408.07009},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.07009}, 
+}
+
+@InProceedings{Rombach_2022_CVPR,
+    author    = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj\"orn},
+    title     = {High-Resolution Image Synthesis With Latent Diffusion Models},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {10684-10695}
+}
+
+@software{ilharco_gabriel_2021_5143773,
+  author       = {Ilharco, Gabriel and
+                  Wortsman, Mitchell and
+                  Wightman, Ross and
+                  Gordon, Cade and
+                  Carlini, Nicholas and
+                  Taori, Rohan and
+                  Dave, Achal and
+                  Shankar, Vaishaal and
+                  Namkoong, Hongseok and
+                  Miller, John and
+                  Hajishirzi, Hannaneh and
+                  Farhadi, Ali and
+                  Schmidt, Ludwig},
+  title        = {OpenCLIP},
+  month        = jul,
+  year         = 2021,
+  note         = {If you use this software, please cite it as below.},
+  publisher    = {Zenodo},
+  version      = {0.1},
+  doi          = {10.5281/zenodo.5143773},
+  url          = {https://doi.org/10.5281/zenodo.5143773}
+}
+
+@misc{podell2023sdxlimprovinglatentdiffusion,
+      title={SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis}, 
+      author={Dustin Podell and Zion English and Kyle Lacey and Andreas Blattmann and Tim Dockhorn and Jonas Müller and Joe Penna and Robin Rombach},
+      year={2023},
+      eprint={2307.01952},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2307.01952}, 
+}
+
+@misc{esser2024scalingrectifiedflowtransformers,
+      title={Scaling Rectified Flow Transformers for High-Resolution Image Synthesis}, 
+      author={Patrick Esser and Sumith Kulal and Andreas Blattmann and Rahim Entezari and Jonas Müller and Harry Saini and Yam Levi and Dominik Lorenz and Axel Sauer and Frederic Boesel and Dustin Podell and Tim Dockhorn and Zion English and Kyle Lacey and Alex Goodwin and Yannik Marek and Robin Rombach},
+      year={2024},
+      eprint={2403.03206},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2403.03206}, 
+}
+
+@article{JMLR:v21:20-074,
+  author  = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+  title   = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer},
+  journal = {Journal of Machine Learning Research},
+  year    = {2020},
+  volume  = {21},
+  number  = {140},
+  pages   = {1--67},
+  url     = {http://jmlr.org/papers/v21/20-074.html}
+}
+
+@InProceedings{Peebles_2023_ICCV,
+    author    = {Peebles, William and Xie, Saining},
+    title     = {Scalable Diffusion Models with Transformers},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {4195-4205}
+}
+
+@inproceedings{
+lipman2023flow,
+title={Flow Matching for Generative Modeling},
+author={Yaron Lipman and Ricky T. Q. Chen and Heli Ben-Hamu and Maximilian Nickel and Matthew Le},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=PqvMRDCJT9t}
+}
+
+@misc{xie2024sanaefficienthighresolutionimage,
+      title={SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformers}, 
+      author={Enze Xie and Junsong Chen and Junyu Chen and Han Cai and Haotian Tang and Yujun Lin and Zhekai Zhang and Muyang Li and Ligeng Zhu and Yao Lu and Song Han},
+      year={2024},
+      eprint={2410.10629},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.10629}, 
+}
+
+@misc{gemmateam2024gemma2improvingopen,
+      title={Gemma 2: Improving Open Language Models at a Practical Size}, 
+      author={Gemma Team},
+      year={2024},
+      eprint={2408.00118},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2408.00118}, 
+}
+
+@inproceedings{NEURIPS2022_39235c56,
+ author = {Ho, Jonathan and Salimans, Tim and Gritsenko, Alexey and Chan, William and Norouzi, Mohammad and Fleet, David J},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {8633--8646},
+ publisher = {Curran Associates, Inc.},
+ title = {Video Diffusion Models},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/39235c56aef13fb05a6adc95eb9d8d66-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@misc{ho2022imagenvideohighdefinition,
+      title={Imagen Video: High Definition Video Generation with Diffusion Models}, 
+      author={Jonathan Ho and William Chan and Chitwan Saharia and Jay Whang and Ruiqi Gao and Alexey Gritsenko and Diederik P. Kingma and Ben Poole and Mohammad Norouzi and David J. Fleet and Tim Salimans},
+      year={2022},
+      eprint={2210.02303},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2210.02303}, 
+}
+
+@misc{gupta2023photorealisticvideogenerationdiffusion,
+      title={Photorealistic Video Generation with Diffusion Models}, 
+      author={Agrim Gupta and Lijun Yu and Kihyuk Sohn and Xiuye Gu and Meera Hahn and Li Fei-Fei and Irfan Essa and Lu Jiang and José Lezama},
+      year={2023},
+      eprint={2312.06662},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2312.06662}, 
+}
+
+@article{videoworldsimulators2024,
+  title={Video generation models as world simulators},
+  author={Tim Brooks and Bill Peebles and Connor Holmes and Will DePue and Yufei Guo and Li Jing and David Schnurr and Joe Taylor and Troy Luhman and Eric Luhman and Clarence Ng and Ricky Wang and Aditya Ramesh},
+  year={2024},
+  url={https://openai.com/research/video-generation-models-as-world-simulators},
+}
+
+@article{moviegen2024,
+  title={Movie Gen: A Cast of Media Foundation Models},
+  author={The Movie Gen team @ Meta},
+  year={2024},
+  url={https://ai.meta.com/static-resource/movie-gen-research-paper},
+}
+
+@misc{jin2024pyramidalflowmatchingefficient,
+      title={Pyramidal Flow Matching for Efficient Video Generative Modeling}, 
+      author={Yang Jin and Zhicheng Sun and Ningyuan Li and Kun Xu and Kun Xu and Hao Jiang and Nan Zhuang and Quzhe Huang and Yang Song and Yadong Mu and Zhouchen Lin},
+      year={2024},
+      eprint={2410.05954},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.05954}, 
+}
+
+@article{poole2022dreamfusion,
+  author = {Poole, Ben and Jain, Ajay and Barron, Jonathan T. and Mildenhall, Ben},
+  title = {DreamFusion: Text-to-3D using 2D Diffusion},
+  journal = {arXiv},
+  year = {2022},
+}
+
+@article{gao2024cat3d,
+    title={CAT3D: Create Anything in 3D with Multi-View Diffusion Models},
+    author={Ruiqi Gao* and Aleksander Holynski* and Philipp Henzler and Arthur Brussee and Ricardo Martin-Brualla and Pratul P. Srinivasan and Jonathan T. Barron and Ben Poole*
+    },
+    journal={arXiv},
+    year={2024}
+}
+
+@inproceedings{NEURIPS2022_1be5bc25,
+ author = {Li, Xiang and Thickstun, John and Gulrajani, Ishaan and Liang, Percy S and Hashimoto, Tatsunori B},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {4328--4343},
+ publisher = {Curran Associates, Inc.},
+ title = {Diffusion-LM Improves Controllable Text Generation},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/1be5bc25d50895ee656b8c2d9eb89d6a-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@misc{huang2023noise2musictextconditionedmusicgeneration,
+      title={Noise2Music: Text-conditioned Music Generation with Diffusion Models}, 
+      author={Qingqing Huang and Daniel S. Park and Tao Wang and Timo I. Denk and Andy Ly and Nanxin Chen and Zhengdong Zhang and Zhishuai Zhang and Jiahui Yu and Christian Frank and Jesse Engel and Quoc V. Le and William Chan and Zhifeng Chen and Wei Han},
+      year={2023},
+      eprint={2302.03917},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2302.03917}, 
+}
+
+@misc{evans2024fasttimingconditionedlatentaudio,
+      title={Fast Timing-Conditioned Latent Audio Diffusion}, 
+      author={Zach Evans and CJ Carr and Josiah Taylor and Scott H. Hawley and Jordi Pons},
+      year={2024},
+      eprint={2402.04825},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2402.04825}, 
+}
+
+@misc{li2024qamdtqualityawaremaskeddiffusion,
+      title={QA-MDT: Quality-aware Masked Diffusion Transformer for Enhanced Music Generation}, 
+      author={Chang Li and Ruoyu Wang and Lijuan Liu and Jun Du and Yixuan Sun and Zilu Guo and Zhenrong Zhang and Yuan Jiang},
+      year={2024},
+      eprint={2405.15863},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2405.15863}, 
+}
+
+@misc{betker2023betterspeechsynthesisscaling,
+      title={Better speech synthesis through scaling}, 
+      author={James Betker},
+      year={2023},
+      eprint={2305.07243},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2305.07243}, 
+}
+
+@misc{ju2024naturalspeech3zeroshotspeech,
+      title={NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models}, 
+      author={Zeqian Ju and Yuancheng Wang and Kai Shen and Xu Tan and Detai Xin and Dongchao Yang and Yanqing Liu and Yichong Leng and Kaitao Song and Siliang Tang and Zhizheng Wu and Tao Qin and Xiang-Yang Li and Wei Ye and Shikun Zhang and Jiang Bian and Lei He and Jinyu Li and Sheng Zhao},
+      year={2024},
+      eprint={2403.03100},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2403.03100}, 
+}
+
+@article{chen-etal-2024-f5tts,
+      title={F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching}, 
+      author={Yushen Chen and Zhikang Niu and Ziyang Ma and Keqi Deng and Chunhui Wang and Jian Zhao and Kai Yu and Xie Chen},
+      journal={arXiv preprint arXiv:2410.06885},
+      year={2024},
+}
+
+@inproceedings{
+corso2023diffdock,
+title={DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking},
+author={Gabriele Corso and Hannes St{\"a}rk and Bowen Jing and Regina Barzilay and Tommi S. Jaakkola},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=kKF8_K-mBbS}
+}
+
+@article {Alamdari2023.09.11.556673,
+	author = {Alamdari, Sarah and Thakkar, Nitya and van den Berg, Rianne and Lu, Alex X. and Fusi, Nicolo and Amini, Ava P. and Yang, Kevin K.},
+	title = {Protein generation with evolutionary diffusion: sequence is all you need},
+	elocation-id = {2023.09.11.556673},
+	year = {2023},
+	doi = {10.1101/2023.09.11.556673},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Deep generative models are increasingly powerful tools for the in silico design of novel proteins. Recently, a family of generative models called diffusion models has demonstrated the ability to generate biologically plausible proteins that are dissimilar to any actual proteins seen in nature, enabling unprecedented capability and control in de novo protein design. However, current state-of-the-art models generate protein structures, which limits the scope of their training data and restricts generations to a small and biased subset of protein design space. Here, we introduce a general-purpose diffusion framework, EvoDiff, that combines evolutionary-scale data with the distinct conditioning capabilities of diffusion models for controllable protein generation in sequence space. EvoDiff generates high-fidelity, diverse, and structurally-plausible proteins that cover natural sequence and functional space. Critically, EvoDiff can generate proteins inaccessible to structure-based models, such as those with disordered regions, while maintaining the ability to design scaffolds for functional structural motifs, demonstrating the universality of our sequence-based formulation. We envision that EvoDiff will expand capabilities in protein engineering beyond the structure-function paradigm toward programmable, sequence-first design.Competing Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2023/09/12/2023.09.11.556673},
+	eprint = {https://www.biorxiv.org/content/early/2023/09/12/2023.09.11.556673.full.pdf},
+	journal = {bioRxiv}
+}
+
+@Article{Abramson2024,
+author="Abramson, Josh
+and Adler, Jonas
+and Dunger, Jack
+and Evans, Richard
+and Green, Tim
+and Pritzel, Alexander
+and Ronneberger, Olaf
+and Willmore, Lindsay
+and Ballard, Andrew J.
+and Bambrick, Joshua
+and Bodenstein, Sebastian W.
+and Evans, David A.
+and Hung, Chia-Chun
+and O'Neill, Michael
+and Reiman, David
+and Tunyasuvunakool, Kathryn
+and Wu, Zachary
+and {\v{Z}}emgulyt{\.{e}}, Akvil{\.{e}}
+and Arvaniti, Eirini
+and Beattie, Charles
+and Bertolli, Ottavia
+and Bridgland, Alex
+and Cherepanov, Alexey
+and Congreve, Miles
+and Cowen-Rivers, Alexander I.
+and Cowie, Andrew
+and Figurnov, Michael
+and Fuchs, Fabian B.
+and Gladman, Hannah
+and Jain, Rishub
+and Khan, Yousuf A.
+and Low, Caroline M. R.
+and Perlin, Kuba
+and Potapenko, Anna
+and Savy, Pascal
+and Singh, Sukhdeep
+and Stecula, Adrian
+and Thillaisundaram, Ashok
+and Tong, Catherine
+and Yakneen, Sergei
+and Zhong, Ellen D.
+and Zielinski, Michal
+and {\v{Z}}{\'i}dek, Augustin
+and Bapst, Victor
+and Kohli, Pushmeet
+and Jaderberg, Max
+and Hassabis, Demis
+and Jumper, John M.",
+title="Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+journal="Nature",
+year="2024",
+month="Jun",
+day="01",
+volume="630",
+number="8016",
+pages="493--500",
+abstract="The introduction of AlphaFold{\thinspace}21 has spurred a revolution in modelling the structure of proteins and their interactions, enabling a huge range of applications in protein modelling and design2--6. Here we describe our AlphaFold{\thinspace}3 model with a substantially updated diffusion-based architecture that is capable of predicting the joint structure of complexes including proteins, nucleic acids, small molecules, ions and modified residues. The new AlphaFold model demonstrates substantially improved accuracy over many previous specialized tools: far greater accuracy for protein--ligand interactions compared with state-of-the-art docking tools, much higher accuracy for protein--nucleic acid interactions compared with nucleic-acid-specific predictors and substantially higher antibody--antigen prediction accuracy compared with AlphaFold-Multimer v.2.37,8. Together, these results show that high-accuracy modelling across biomolecular space is possible within a single unified deep-learning framework.",
+issn="1476-4687",
+doi="10.1038/s41586-024-07487-w",
+url="https://doi.org/10.1038/s41586-024-07487-w"
+}
+
+@inproceedings{chi2023diffusionpolicy,
+	title={Diffusion Policy: Visuomotor Policy Learning via Action Diffusion},
+	author={Chi, Cheng and Feng, Siyuan and Du, Yilun and Xu, Zhenjia and Cousineau, Eric and Burchfiel, Benjamin and Song, Shuran},
+	booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+	year={2023}
+}
+
+@misc{valevski2024diffusionmodelsrealtimegame,
+        title={Diffusion Models Are Real-Time Game Engines}, 
+        author={Dani Valevski and Yaniv Leviathan and Moab Arar and Shlomi Fruchter},
+        year={2024},
+        eprint={2408.14837},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG},
+        url={https://arxiv.org/abs/2408.14837}, 
+  }
+
+@ARTICLE {10419041,
+author = {H. Cao and C. Tan and Z. Gao and Y. Xu and G. Chen and P. Heng and S. Z. Li},
+journal = {IEEE Transactions on Knowledge &amp; Data Engineering},
+title = {A Survey on Generative Diffusion Models},
+year = {2024},
+volume = {36},
+number = {07},
+issn = {1558-2191},
+pages = {2814-2830},
+abstract = {Deep generative models have unlocked another profound realm of human creativity. By capturing and generalizing patterns within data, we have entered the epoch of all-encompassing Artificial Intelligence for General Creativity (AIGC). Notably, diffusion models, recognized as one of the paramount generative models, materialize human ideation into tangible instances across diverse domains, encompassing imagery, text, speech, biology, and healthcare. To provide advanced and comprehensive insights into diffusion, this survey comprehensively elucidates its developmental trajectory and future directions from three distinct angles: the fundamental formulation of diffusion, algorithmic enhancements, and the manifold applications of diffusion. Each layer is meticulously explored to offer a profound comprehension of its evolution. Structured and summarized approaches are presented here.},
+keywords = {mathematical models;kernel;computational modeling;training;surveys;noise reduction;markov processes},
+doi = {10.1109/TKDE.2024.3361474},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {jul}
+}
+
+
+
+
+
+
+@inbook{10.5555/3454287.3455354,
+author = {Song, Yang and Ermon, Stefano},
+title = {Generative modeling by estimating gradients of the data distribution},
+year = {2019},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {We introduce a new generative model where samples are produced via Langevin dynamics using gradients of the data distribution estimated with score matching. Because gradients can be ill-defined and hard to estimate when the data resides on low-dimensional manifolds, we perturb the data with different levels of Gaussian noise, and jointly estimate the corresponding scores, i.e., the vector fields of gradients of the perturbed data distribution for all noise levels. For sampling, we propose an annealed Langevin dynamics where we use gradients corresponding to gradually decreasing noise levels as the sampling process gets closer to the data manifold. Our framework allows flexible model architectures, requires no sampling during training or the use of adversarial methods, and provides a learning objective that can be used for principled model comparisons. Our models produce samples comparable to GANs on MNIST, CelebA and CIFAR-10 datasets, achieving a new state-of-the-art inception score of 8.87 on CIFAR-10. Additionally, we demonstrate that our models learn effective representations via image inpainting experiments.},
+booktitle = {Proceedings of the 33rd International Conference on Neural Information Processing Systems},
+articleno = {1067},
+numpages = {13}
+}
+
+@inproceedings{10.5555/3495724.3496767,
+author = {Song, Yang and Ermon, Stefano},
+title = {Improved techniques for training score-based generative models},
+year = {2020},
+isbn = {9781713829546},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Score-based generative models can produce high quality image samples comparable to GANs, without requiring adversarial optimization. However, existing training procedures are limited to images of low resolution (typically below 32 \texttimes{} 32), and can be unstable under some settings. We provide a new theoretical analysis of learning and sampling from score-based models in high dimensional spaces, explaining existing failure modes and motivating new solutions that generalize across datasets. To enhance stability, we also propose to maintain an exponential moving average of model weights. With these improvements, we can scale score-based generative models to various image datasets, with diverse resolutions ranging from 64 \texttimes{} 64 to 256 \texttimes{} 256. Our score-based models can generate high-fidelity samples that rival best-in-class GANs on various image datasets, including CelebA, FFHQ, and several LSUN categories.},
+booktitle = {Proceedings of the 34th International Conference on Neural Information Processing Systems},
+articleno = {1043},
+numpages = {11},
+location = {Vancouver, BC, Canada},
+series = {NIPS '20}
+}
+
+@inproceedings{
+song2021scorebased,
+title={Score-Based Generative Modeling through Stochastic Differential Equations},
+author={Yang Song and Jascha Sohl-Dickstein and Diederik P Kingma and Abhishek Kumar and Stefano Ermon and Ben Poole},
+booktitle={International Conference on Learning Representations},
+year={2021},
+url={https://openreview.net/forum?id=PxTIG12RRHS}
+}
+
+@inproceedings{NEURIPS2022_a98846e9,
+ author = {Karras, Tero and Aittala, Miika and Aila, Timo and Laine, Samuli},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+ pages = {26565--26577},
+ title = {Elucidating the Design Space of Diffusion-Based Generative Models},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/a98846e9d9cc01cfb87eb694d946ce6b-Paper-Conference.pdf},
+ volume = {35},
+ year = {2022}
+}
+
+@inproceedings{
+salimans2022progressive,
+title={Progressive Distillation for Fast Sampling of Diffusion Models},
+author={Tim Salimans and Jonathan Ho},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=TIdIXIpzhoI}
+}
+
+@article{song2023consistency,
+  title={Consistency Models},
+  author={Song, Yang and Dhariwal, Prafulla and Chen, Mark and Sutskever, Ilya},
+  journal={arXiv preprint arXiv:2303.01469},
+  year={2023},
+}
+
+@misc{zhou2024simplefastdistillationdiffusion,
+      title={Simple and Fast Distillation of Diffusion Models}, 
+      author={Zhenyu Zhou and Defang Chen and Can Wang and Chun Chen and Siwei Lyu},
+      year={2024},
+      eprint={2409.19681},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2409.19681}, 
+}
+
+@INPROCEEDINGS{10484327,
+  author={Lin, Shanchuan and Liu, Bingchen and Li, Jiashi and Yang, Xiao},
+  booktitle={2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 
+  title={Common Diffusion Noise Schedules and Sample Steps are Flawed}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={5392-5399},
+  keywords={Training;Schedules;Computer vision;Gaussian noise;Computational modeling;Brightness;Diffusion processes;Algorithms;Generative models for image;video;3D;etc.;Algorithms;Computational photography;image and video synthesis},
+  doi={10.1109/WACV57701.2024.00532}
+}
+
+@article{JMLR:v23:21-0635,
+  author  = {Jonathan Ho and Chitwan Saharia and William Chan and David J. Fleet and Mohammad Norouzi and Tim Salimans},
+  title   = {Cascaded Diffusion Models for High Fidelity Image Generation},
+  journal = {Journal of Machine Learning Research},
+  year    = {2022},
+  volume  = {23},
+  number  = {47},
+  pages   = {1--33},
+  url     = {http://jmlr.org/papers/v23/21-0635.html}
+}
+
+@misc{gal2022textual,
+      doi = {10.48550/ARXIV.2208.01618},
+      url = {https://arxiv.org/abs/2208.01618},
+      author = {Gal, Rinon and Alaluf, Yuval and Atzmon, Yuval and Patashnik, Or and Bermano, Amit H. and Chechik, Gal and Cohen-Or, Daniel},
+      title = {An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion},
+      publisher = {arXiv},
+      year = {2022},
+      primaryClass={cs.CV}
+}
+
+@article{ruiz2022dreambooth,
+  title={DreamBooth: Fine Tuning Text-to-image Diffusion Models for Subject-Driven Generation},
+  author={Ruiz, Nataniel and Li, Yuanzhen and Jampani, Varun and Pritch, Yael and Rubinstein, Michael and Aberman, Kfir},
+  booktitle={arXiv preprint arxiv:2208.12242},
+  year={2022}
+}
+
+@misc{meng2022sdeditguidedimagesynthesis,
+      title={SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations}, 
+      author={Chenlin Meng and Yutong He and Yang Song and Jiaming Song and Jiajun Wu and Jun-Yan Zhu and Stefano Ermon},
+      year={2022},
+      eprint={2108.01073},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2108.01073}, 
+}
+
+@article{hertz2022prompt,
+  title={Prompt-to-prompt image editing with cross attention control},
+  author={Hertz, Amir and Mokady, Ron and Tenenbaum, Jay and Aberman, Kfir and Pritch, Yael and Cohen-Or, Daniel},
+  booktitle={arXiv preprint arXiv:2208.01626},
+  year={2022}
+}
+
+@InProceedings{Lugmayr_2022_CVPR,
+    author    = {Lugmayr, Andreas and Danelljan, Martin and Romero, Andres and Yu, Fisher and Timofte, Radu and Van Gool, Luc},
+    title     = {RePaint: Inpainting Using Denoising Diffusion Probabilistic Models},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {11461-11471}
+}
+
+@misc{levin2023differential,
+      title={Differential Diffusion: Giving Each Pixel Its Strength}, 
+      author={Eran Levin and Ohad Fried},
+      year={2023},
+      eprint={2306.00950},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@InProceedings{Wu_2023_ICCV,
+    author    = {Wu, Jay Zhangjie and Ge, Yixiao and Wang, Xintao and Lei, Stan Weixian and Gu, Yuchao and Shi, Yufei and Hsu, Wynne and Shan, Ying and Qie, Xiaohu and Shou, Mike Zheng},
+    title     = {Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {7623-7633}
+}
+
+@misc{
+molad2024dreamix,
+title={Dreamix: Video Diffusion Models are General Video Editors},
+author={Eyal Molad and Eliahu Horwitz and Dani Valevski and Alex Rav-Acha and Yossi Matias and Yael Pritch and Yaniv Leviathan and Yedid Hoshen},
+year={2024},
+url={https://openreview.net/forum?id=2vAhX71UCL}
+}
+
+@misc{chen2023pixartalphafasttrainingdiffusion,
+      title={PixArt-$\alpha$: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis}, 
+      author={Junsong Chen and Jincheng Yu and Chongjian Ge and Lewei Yao and Enze Xie and Yue Wu and Zhongdao Wang and James Kwok and Ping Luo and Huchuan Lu and Zhenguo Li},
+      year={2023},
+      eprint={2310.00426},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2310.00426}, 
+}
+
+@misc{zhao2024dynamicdiffusiontransformer,
+      title={Dynamic Diffusion Transformer}, 
+      author={Wangbo Zhao and Yizeng Han and Jiasheng Tang and Kai Wang and Yibing Song and Gao Huang and Fan Wang and Yang You},
+      year={2024},
+      eprint={2410.03456},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.03456}, 
+}
+
+@article{zhao2023uni,
+  title={Uni-ControlNet: All-in-One Control to Text-to-Image Diffusion Models},
+  author={Zhao, Shihao and Chen, Dongdong and Chen, Yen-Chun and Bao, Jianmin and Hao, Shaozhe and Yuan, Lu and Wong, Kwan-Yee~K.},
+  journal={Advances in Neural Information Processing Systems},
+  year={2023}
+}
+
+@inproceedings{controlnet_plus_plus,
+    author    = {Ming Li and Taojiannan Yang and Huafeng Kuang and Jie Wu and Zhaoning Wang and Xuefeng Xiao and Chen Chen},
+    title     = {ControlNet++: Improving Conditional Controls with Efficient Consistency Feedback},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    year      = {2024},
+}
+
+@article{xu2024ctrlora,
+  title={CtrLoRA: An Extensible and Efficient Framework for Controllable Image Generation},
+  author={Xu, Yifeng and He, Zhenliang and Shan, Shiguang and Chen, Xilin},
+  journal={arXiv preprint arXiv:2410.09400},
+  year={2024}
+}
+
+@inproceedings{
+liu2024instaflow,
+title={InstaFlow: One Step is Enough for High-Quality Diffusion-Based Text-to-Image Generation},
+author={Xingchao Liu and Xiwen Zhang and Jianzhu Ma and Jian Peng and qiang liu},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=1k4yZbbDqX}
+}
+
+@misc{wang2024rectifieddiffusionstraightnessneed,
+      title={Rectified Diffusion: Straightness Is Not Your Need in Rectified Flow}, 
+      author={Fu-Yun Wang and Ling Yang and Zhaoyang Huang and Mengdi Wang and Hongsheng Li},
+      year={2024},
+      eprint={2410.07303},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.07303}, 
+}

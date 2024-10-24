@@ -1,0 +1,27 @@
+---
+title: "Diffusion models"
+---
+
+Contents
+
+- <a href="javascript:getSlides()">Slides</a>
+- <a href="javascript:getSlidesHandout()">Slides (handout version)</a>
+- [Forward diffusion process demo](forward_diffusion_demo/Forward_diffusion_demo.html){target="_blank"}
+- [The Nice™ property demo](the_nice_property_demo/The_Nice_property_demo.html){target="_blank"}
+- [Appendices](Appendices for lectures on diffusion models.ipynb)
+
+![*A polar bear with sunglasses surfing in space*. Created with Stable Diffusion XL 1.0](images/sdxl_polarbear.webp){fig-align="center"}
+
+<script>
+ function getSlides() {
+ window.beam("/slides/get_slides")
+ window.open('Slides.pdf');
+ }
+</script>
+
+<script>
+ function getSlidesHandout() {
+ window.beam("/slides/get_slides_handout")
+ window.open('Slides-handout_version.pdf');
+ }
+</script>

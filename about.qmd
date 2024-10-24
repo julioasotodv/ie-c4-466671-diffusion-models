@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+Materials for lectures on diffusion models for [IE University](https://www.ie.edu/) (C4_466671 - Advanced Artificial Intelligence)
+
+For inquiries, contact [Laura](mailto:lau.sanchez034@gmail.com) or [Julio](mailto:julioantonio.sotovicente@gmail.com)

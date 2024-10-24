@@ -1,0 +1,16 @@
+.ipynb_checkpoints/*
+pyodide/*
+.DS_Store
+*.log
+*.tex
+*.aux
+*.nav
+*.snm
+*.toc
+*_files
+*_demo
+!toc.tex
+!docs/*_demo
+search.json
+afhq_v2/*
+/.quarto/
