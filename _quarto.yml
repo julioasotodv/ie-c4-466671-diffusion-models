@@ -9,6 +9,8 @@ project:
   resources:
     - forward_diffusion_demo
     - the_nice_property_demo
+    - get_slides.html
+    - get_slides_handout.html
     - js
     - Slides.pdf
 
