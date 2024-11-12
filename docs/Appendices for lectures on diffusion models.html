@@ -496,13 +496,13 @@ c \sim \mathcal{N}(\mu_a + \mu_b, \, \sigma^2_a + \sigma^2_b)
 </ul>
 <p>To make sure we understand, let’s take a look at the diagram in slide 18:</p>
 <p><img src="images/ddpm_process_and_equations.png" class="img-fluid"></p>
-<p>The bulk of our loss is the denoising matching term, which is the KL divergence between what would be the perfect reverse diffusion process (called forward process posterior) and the one that our model will produce. This means that if our model is able to closely replicate this forward process posterior, we will end up with great quality images! That is why this will be the focus of our procedure. <br><br></p>
+<p>The bulk of our loss is the denoising matching term, which is the KL divergence between what would be the perfect reverse diffusion process (called <em>forward process posterior</em>) and the one that our model will produce. This means that if our model is able to closely replicate this forward process posterior, we will end up with great quality images! That is why this will be the focus of our procedure. <br><br></p>
 <p>Sidenote: If you look at the DDPM paper, you will find a similar yet different formula in Equation <span class="math inline">\((5)\)</span> of the DDPM paper. Let’s write it down here:</p>
 <p><span class="math display">\[- \text{ELBO}_\text{DDPM} = \mathbb{E}_q \left[ \underbrace {\mathcal{D}_{\text{KL}}(q(\mathbf{x}_T \mid \mathbf{x}_0) \mid \mid p(\mathbf{x}_T))}_{L_T} + \sum_{t=2}^T{\underbrace{\mathcal{D}_{\text{KL}}(q(\mathbf{x}_{t-1} \mid \mathbf{x}_t, \mathbf{x}_0) \mid \mid p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t))}_{L_{t-1}}} \underbrace{ - \log p_\theta(\mathbf{x}_0 \mid \mathbf{x}_1)}_{L_0} \right] \tag{21} \label{21}\]</span> <br> It is actually the same equation as <span class="math inline">\(\eqref{20}\)</span> which we just developed, but with three differences:</p>
 <ul>
 <li><p>The one in the paper is the negative ELBO (therefore it will be minimized instead of maximized), so signs have flipped</p></li>
 <li><p>They change the order of the terms, which obviously does not affect at all</p></li>
-<li><p>The paper’s notation when it comes to the expectations is more vague. However, it is not important. When training the model, the common way to minimize an expectation is basically through iterating over training samples with stochastic gradient descent many times. Therefore, in the paper they do some abuse of notation and just write a single expectation with a generic subscript <span class="math inline">\(q\)</span></p></li>
+<li><p>The paper’s notation is more vague when it comes to expressing the expectation. However, it is not important. When training the model, the common way to minimize an expectation is basically through iterating over training samples with stochastic gradient descent many times. Therefore, in the paper they do some abuse of notation and just write a single expectation with a generic subscript <span class="math inline">\(q\)</span></p></li>
 </ul>
 <p>Other than that, it is the exact same formula. So, from now on we will use this equation for the loss.</p>
 <p>In the paper they refer to those three terms with the names <span class="math inline">\(L_T\)</span>, <span class="math inline">\(L_{t-1}\)</span> and <span class="math inline">\(L_0\)</span> (instead of prior matching, denoising matching and reconstruction, respectively):</p>
@@ -511,7 +511,7 @@ c \sim \mathcal{N}(\mu_a + \mu_b, \, \sigma^2_a + \sigma^2_b)
 <li><p><span class="math inline">\(L_{t-1}\)</span> will be our focus</p></li>
 <li><p><span class="math inline">\(L_0\)</span> gets a special treatment in Section 3.3 of the DDPM paper, and they show how it can be learned with a separate model. However, it just focuses on what would be the very last denoising step (out of a thousand of them); therefore, its importance is quite negligible (as <span class="math inline">\(\mathbf{x}_{1}\)</span> is almost noiseless already, given that we have set a small enough <span class="math inline">\(\beta_t\)</span>). Therefore, the authors decide in Section 3.4 to ignore this term as well<br><br></p></li>
 </ul>
-<p><em>Note: This same derivation can be found in Appendix A (page 13) of the DDPM paper. However, the steps described here go into much more detail than what you will find there. However, it is basically the same derivation.</em><br><br></p>
+<p><em>Note: This same derivation can be found in Appendix A (page 13) of the DDPM paper. However, the steps described here go into much more detail than what you will find there. With that said, it is basically the same derivation.</em><br><br></p>
 <p>To conclude: all of a sudden, our model will only care about <span class="math inline">\(L_{t-1}\)</span>. We will build the model training procedure out of this term. <br><br></p>
 <hr>
 </section>
