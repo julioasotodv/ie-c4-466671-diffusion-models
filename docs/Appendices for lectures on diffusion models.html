@@ -403,13 +403,13 @@ c \sim \mathcal{N}(\mu_a + \mu_b, \, \sigma^2_a + \sigma^2_b)
 <p><span class="math display">\[\begin{align}
 \text{ELBO}_\text{DDPM} &amp; = \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log \frac{p(\mathbf{x}_T) p_\theta(\mathbf{x}_0 \mid \mathbf{x}_1)}{q(\mathbf{x}_1 \mid \mathbf{x}_0)} + \log \prod^T_{t=2}{\frac{p_{\theta}(\mathbf{x}_{t-1} \mid \mathbf{x}_{t})}{\frac{q(\mathbf{x}_{t-1} \mid \mathbf{x}_t, \mathbf{x}_0) q(\mathbf{x}_t \mid \mathbf{x_0})}{q(\mathbf{x}_{t-1} \mid \mathbf{x_0})}}} \right] \\
 \, \\
-&amp; \text{rearrange the denominator:} \\
+&amp; \text{rearranging the denominator in the last term:} \\
 &amp; = \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log \frac{p(\mathbf{x}_T) p_\theta(\mathbf{x}_0 \mid \mathbf{x}_1)}{q(\mathbf{x}_1 \mid \mathbf{x}_0)} + \log \left( \prod_{t=2}^{T}{\frac{p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t)}{q(\mathbf{x}_{t-1} \mid \mathbf{x}_t, \mathbf{x}_0)}} \times \prod_{t=2}^{T}{\frac{q(\mathbf{x}_{t-1} \mid \mathbf{x}_0)}{q(\mathbf{x}_t \mid \mathbf{x}_0)}}  \right) \right] \tag{15} \label{15}
 \end{align}\]</span> <br> And we can simplify the last product in <span class="math inline">\(\eqref{15}\)</span>. To see how, let’s develop it for instance assuming that <span class="math inline">\(T = 6\)</span>:</p>
 <p><span class="math display">\[\begin{align}
 \prod_{t=2}^{6}{\frac{q(\mathbf{x}_{t-1} \mid \mathbf{x}_0)}{q(\mathbf{x}_t \mid \mathbf{x}_0)}} &amp;= \frac{q(\mathbf{x}_1 \mid \mathbf{x}_0)}{q(\mathbf{x}_2 \mid \mathbf{x}_0)} \times \frac{q(\mathbf{x}_2 \mid \mathbf{x}_0)}{q(\mathbf{x}_3 \mid \mathbf{x}_0)} \times \frac{q(\mathbf{x}_3 \mid \mathbf{x}_0)}{q(\mathbf{x}_4 \mid \mathbf{x}_0)} \times \frac{q(\mathbf{x}_4 \mid \mathbf{x}_0)}{q(\mathbf{x}_5 \mid \mathbf{x}_0)} \times \frac{q(\mathbf{x}_5 \mid \mathbf{x}_0)}{q(\mathbf{x}_6 \mid \mathbf{x}_0)} \\
 \, \\
-&amp; \text{we can cancel out most terms, as are present in numerator and denominator:} \\
+&amp; \text{we can cancel out most terms, as are present in both numerator and denominator:} \\
 &amp; = \frac{q(\mathbf{x}_1 \mid \mathbf{x}_0)}{\cancel{q(\mathbf{x}_2 \mid \mathbf{x}_0)}} \times \frac{\cancel{q(\mathbf{x}_2 \mid \mathbf{x}_0)}}{\cancel{q(\mathbf{x}_3 \mid \mathbf{x}_0)}} \times \frac{\cancel{q(\mathbf{x}_3 \mid \mathbf{x}_0)}}{\cancel{q(\mathbf{x}_4 \mid \mathbf{x}_0)}} \times \frac{\cancel{q(\mathbf{x}_4 \mid \mathbf{x}_0)}}{\cancel{q(\mathbf{x}_5 \mid \mathbf{x}_0)}} \times \frac{\cancel{q(\mathbf{x}_5 \mid \mathbf{x}_0)}}{q(\mathbf{x}_6 \mid \mathbf{x}_0)} \\
 \, \\
 &amp; = \frac{q(\mathbf{x}_1 \mid \mathbf{x}_0)}{q(\mathbf{x}_6 \mid \mathbf{x}_0)}
@@ -434,7 +434,7 @@ c \sim \mathcal{N}(\mu_a + \mu_b, \, \sigma^2_a + \sigma^2_b)
 &amp; \text{applying yet again} \log(a \cdot b) = \log a + \log b \text{, but now to the product in the third term:} \\
 &amp;= \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log p_\theta(\mathbf{x}_0 \mid \mathbf{x}_1) + \log \frac{p(\mathbf{x}_T)}{q(\mathbf{x}_T \mid \mathbf{x}_0)} + \sum_{t=2}^{T}{\log  \frac{p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t)}{q(\mathbf{x}_{t-1} \mid \mathbf{x}_t, \mathbf{x}_0)}} \right] \\
 \, \\
-&amp; \text{due to the property of linearity of expecation: } \mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y] \text{:} \\
+&amp; \text{due to the linearity of expectation property: } \mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y] \text{:} \\
 &amp;= \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log p_\theta(\mathbf{x}_0 \mid \mathbf{x}_1) \right] + \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log \frac{p(\mathbf{x}_T)}{q(\mathbf{x}_T \mid \mathbf{x}_0)} \right] + \sum_{t=2}^{T}{ \mathbb{E}_{q(\mathbf{x}_{1:T} \mid \mathbf{x}_0)} \left[ \log  \frac{p_\theta(\mathbf{x}_{t-1} \mid \mathbf{x}_t)}{q(\mathbf{x}_{t-1} \mid \mathbf{x}_t, \mathbf{x}_0)} \right]} \tag{16} \label{16}\\
 \end{align}\]</span> <br></p>
 <p>With this, we end up with three expectation terms. All three are expectations over <span class="math inline">\(q(\mathbf{x}_{1:T}\mid \mathbf{x}_0)\)</span>. However, it doesn’t make sense to try to compute the expectation (which is nothing but a weighted average) over terms that do not appear inside the brackets of that specific expectation. For instance, within the brackets of the first expectation we only have <span class="math inline">\(\mathbf{x}_0\)</span> and <span class="math inline">\(\mathbf{x}_1\)</span>, so any other <span class="math inline">\(\mathbf{x}_\ldots\)</span> which is present in <span class="math inline">\(1:T\)</span> can be dropped from the subscript.</p>
