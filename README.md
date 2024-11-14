@@ -2,7 +2,7 @@
 
 Material for lectures on Diffusion models at IE university (C4_466671 - Advanced Artificial Intelligence)
 
-Click [here](https://julioasotodv.github.io/ie-c4-466671-diffusion-models) to access the site where you can download the lecture slides
+Click [here](https://julioasotodv.github.io/ie-c4-466671-diffusion-models) to access the site (slides can be downloaded from there)
 
 ## Contents
 
